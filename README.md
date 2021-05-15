@@ -6,7 +6,11 @@
 
 Checkout application from below github url,
 
-https://github.com/ramadg05/RabobankCustomerStatementProcessor/
+https://github.com/ramadg05/RabobankCustomerStatementProcessor/tree/master
+
+project folder -> mvn clean install
+
+Run the application -> mvn spring-boot:run
 
 Access below URL from POSTMAN / Rest Client
 
