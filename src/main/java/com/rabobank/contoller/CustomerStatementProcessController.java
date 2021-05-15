@@ -1,6 +1,5 @@
 package com.rabobank.contoller;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,18 +26,24 @@ public class CustomerStatementProcessController {
 	private ValidatorService validatorService;
 
 	@PostMapping(value="/process")
-	public CustomerStatementResponse processCustomerStatement(@RequestBody List<CustomerStatementRecord> customerStatementRecords) throws IOException {
-		return buildResponse(customerStatementRecords);
+	public CustomerStatementResponse processCustomerStatement(@RequestBody List<CustomerStatementRecord> customerStatementRecords) {
+		return processRecords(customerStatementRecords);
 	}
-
-	private CustomerStatementResponse buildResponse(List<CustomerStatementRecord> statementList) {
-		CustomerStatementResponse customerStatementResponse = new CustomerStatementResponse();
+	
+	private CustomerStatementResponse processRecords(List<CustomerStatementRecord> customerStatementRecords) {
 		ArrayList<CustomerStatementRecord> duplicateReferenceRecords = new ArrayList<>();
 		ArrayList<CustomerStatementRecord> incorrectEndBalanceRecords = new ArrayList<>();
 
-		duplicateReferenceRecords.addAll(validatorService.getDuplicateTransactionRefRecords(statementList));
-		incorrectEndBalanceRecords.addAll(validatorService.getIncorrectEndBalanceRecords(statementList));
+		duplicateReferenceRecords.addAll(validatorService.getDuplicateTransactionRefRecords(customerStatementRecords));
+		incorrectEndBalanceRecords.addAll(validatorService.getIncorrectEndBalanceRecords(customerStatementRecords));
 
+		return buildResponse(duplicateReferenceRecords, incorrectEndBalanceRecords);
+	}
+
+	private CustomerStatementResponse buildResponse(ArrayList<CustomerStatementRecord> duplicateReferenceRecords, 
+			ArrayList<CustomerStatementRecord> incorrectEndBalanceRecords) {
+		CustomerStatementResponse customerStatementResponse = new CustomerStatementResponse();
+		
 		if (duplicateReferenceRecords.isEmpty() && incorrectEndBalanceRecords.isEmpty()) {
 			customerStatementResponse.setResult(CustomerStatementConstants.SUCCESSFUL);
 			customerStatementResponse.setErrorRecords(duplicateReferenceRecords);

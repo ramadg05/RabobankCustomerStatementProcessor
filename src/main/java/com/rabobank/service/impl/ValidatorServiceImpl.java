@@ -1,6 +1,7 @@
 package com.rabobank.service.impl;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -34,7 +35,7 @@ public class ValidatorServiceImpl implements ValidatorService {
 		
 		customerStatementList.forEach(customerStatement -> {
 			double balance = customerStatement.getStartBalance() + customerStatement.getMutation() - customerStatement.getEndBalance();
-			BigDecimal resultRounded = BigDecimal.valueOf(balance).setScale(2, BigDecimal.ROUND_HALF_UP);
+			BigDecimal resultRounded = BigDecimal.valueOf(balance).setScale(2, RoundingMode.HALF_DOWN);
 			if (resultRounded.doubleValue() != 0.0) {
 				incorretEndBalanceRecords.add(customerStatement);
 			}
