@@ -43,8 +43,8 @@ class CustomerStatementProcessControllerTest {
 		CustomerStatementRecord customerStatementRecord = new CustomerStatementRecord();
 		CustomerStatementRecord customerStatementRecord1 = new CustomerStatementRecord();
 		List<CustomerStatementRecord> customerStatementRecordList =  new ArrayList<CustomerStatementRecord>();
-		customerStatementRecord.setAccountNumber("NL91RABO0315273637");
-		customerStatementRecord1.setAccountNumber("NL91RABO0315278769");
+		customerStatementRecord.setAccountNumber("NL90RABO0979679769");
+		customerStatementRecord1.setAccountNumber("NL90RABO0087001234");
 		customerStatementRecordList.add(customerStatementRecord);
 		customerStatementRecordList.add(customerStatementRecord1);
 		
@@ -174,8 +174,8 @@ class CustomerStatementProcessControllerTest {
 		CustomerStatementRecord customerStatementRecord = new CustomerStatementRecord();
 		CustomerStatementRecord customerStatementRecord1 = new CustomerStatementRecord();
 		List<CustomerStatementRecord> customerStatementRecordList =  new ArrayList<CustomerStatementRecord>();
-		customerStatementRecord.setAccountNumber("NL91RABO0315273637");
-		customerStatementRecord1.setAccountNumber("NL91RABO0315278769");
+		customerStatementRecord.setAccountNumber("NL90RABO0979679769");
+		customerStatementRecord1.setAccountNumber("NL90RABO0087001234");
 		customerStatementRecordList.add(customerStatementRecord);
 		customerStatementRecordList.add(customerStatementRecord1);
 		 

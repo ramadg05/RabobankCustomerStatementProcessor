@@ -25,12 +25,12 @@ class ValidatorServiceImplTest {
 		List<CustomerStatementRecord> customerStatementRecords = new ArrayList<>();
 
 		// Record List with two duplicate records
-		CustomerStatementRecord record1 = new CustomerStatementRecord(123456, "NL91RABO0315273637", 21.6, -41.83,
-				"Record1", -20.23);
-		CustomerStatementRecord record2 = new CustomerStatementRecord(123455, "NL91RABO0315278769", 86.66, 44.5,
-				"Record2", 131.16);
-		CustomerStatementRecord record3 = new CustomerStatementRecord(123456, "NL91RABO0315279235", 90.83, -10.91,
-				"Record3", 79.92);
+		CustomerStatementRecord record1 = new CustomerStatementRecord(894261, "NL90RABO0979679770", 10.5, 20.5,
+				"Record1", 31.0);
+		CustomerStatementRecord record2 = new CustomerStatementRecord(894262, "NL90RABO0979679769", 10.5, 20.5,
+				"Record2", 10.5);
+		CustomerStatementRecord record3 = new CustomerStatementRecord(894261, "NL90RABO0979679768", 10.5, -20.5,
+				"Record3", 15.0);
 		customerStatementRecords.add(record1);
 		customerStatementRecords.add(record2);
 		customerStatementRecords.add(record3);
@@ -47,12 +47,12 @@ class ValidatorServiceImplTest {
 		List<CustomerStatementRecord> customerStatementRecords = new ArrayList<>();
 
 		// Record List with two End balance error records
-		CustomerStatementRecord record1 = new CustomerStatementRecord(194261, "NL91RABO0315273637", 21.6, -41.83,
-				"Record1", -10.23);
-		CustomerStatementRecord record2 = new CustomerStatementRecord(194262, "NL91RABO0315278769", 86.66, 44.5,
-				"Record2", 131.16);
-		CustomerStatementRecord record3 = new CustomerStatementRecord(194261, "NL91RABO0315279235", 90.83, -10.91,
-				"Record3", 99.92);
+		CustomerStatementRecord record1 = new CustomerStatementRecord(894261, "NL90RABO0979679770", 10.5, 20.5,
+				"Record1", 31.0);
+		CustomerStatementRecord record2 = new CustomerStatementRecord(894262, "NL90RABO0979679769", 10.5, 20.5,
+				"Record2", 10.5);
+		CustomerStatementRecord record3 = new CustomerStatementRecord(894263, "NL90RABO0979679768", 10.5, -20.5,
+				"Record3", 15.0);
 		customerStatementRecords.add(record1);
 		customerStatementRecords.add(record2);
 		customerStatementRecords.add(record3);
