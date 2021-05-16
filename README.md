@@ -35,8 +35,8 @@ Note:Update the transaction reference number and mutation/End balance to verify 
 2)The end balance needs to be validated
 
     End balance validated using the logic below,
+    
+    Result = Start Balance + Mutation - End Balance
   
-    Start Balance +/- Mutation = End Balance
-  
-    If the result is 0.0 then it is correct end balance. Otherwise Im adding incorrect end balance to list to populate the end response
+    If the result is 0.0 then there is no incorrect end balance. Otherwise Im adding incorrect end balance to list to populate the end response
     
