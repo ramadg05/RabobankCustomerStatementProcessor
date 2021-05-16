@@ -22,7 +22,7 @@ Application URL : http://localhost:8080/api/v1/rabobank/process
 
 # Sample data for post method - no duplicate and no incorrect End balance:
 
-[{"transactionReference":123455, "accountNumber":"NL90RABO0979679770", "startBalance" : 10, "mutation":10, "description":"First Record", "endBalance":20 }, {"transactionReference":123456, "accountNumber":"NL90RABO0979679769" "startBalance" : 110, "mutation":10, "description":"Second Record", "endBalance":120 }]
+
 
 
 Note:Update the transaction reference number and mutation/End balance to verify other scenarios
