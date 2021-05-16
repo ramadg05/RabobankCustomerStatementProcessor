@@ -39,4 +39,11 @@ Note:Update the transaction reference number and mutation/End balance to verify 
     Result = Start Balance + Mutation - End Balance
   
     If the result is 0.0 then there is no incorrect end balance. Otherwise Im adding incorrect end balance to list to populate the end response
+   
+# Code Coverage :
+
+Junit code coverage is more than 80%
+
+<img width="562" alt="CodeCoverage" src="https://user-images.githubusercontent.com/84231315/118409630-ad5a0780-b68b-11eb-9020-9aea61a8bdfb.PNG">
+
     
